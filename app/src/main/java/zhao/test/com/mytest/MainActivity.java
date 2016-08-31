@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             new TrueFalse(R.string.question_text4, true),
             new TrueFalse(R.string.question_text5, false),
     };
+    private Button btnPre;
     private Button btnNext;
     private int mCurrentQuestion;
 
@@ -70,6 +71,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnPre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mCurrentIndex!=0){
+                    mCurrentIndex=(mCurrentIndex-1)%mQuestionBank.length;
+                }else {
+                    mCurrentIndex=mQuestionBank.length-1;
+                }
+                        setQuestion();
+                    }
+                });
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         btnTrue = (Button) findViewById(R.id.btn_true);
         btnFalse = (Button) findViewById(R.id.btn_false);
         btnNext = (Button) findViewById(R.id.btn_next);
+        btnPre = (Button) findViewById(R.id.btn_previous);
     }
 
     @Override
