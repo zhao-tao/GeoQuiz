@@ -1,5 +1,6 @@
 package zhao.test.com.mytest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import zhao.test.com.mytest.Bean.Main2Activity;
 import zhao.test.com.mytest.Bean.TrueFalse;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnPre;
     private Button btnNext;
     private int mCurrentQuestion;
+    private Button activity2;
 
 
     @Override
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         initView();
         setListener();
         setQuestion();
+        Runtime.getRuntime().maxMemory();
     }
 
     @Override
@@ -90,6 +94,13 @@ public class MainActivity extends AppCompatActivity {
                 setQuestion();
             }
         });
+        
+        activity2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+            }
+        });
 
     }
 
@@ -107,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         btnFalse = (Button) findViewById(R.id.btn_false);
         btnNext = (Button) findViewById(R.id.btn_next);
         btnPre = (Button) findViewById(R.id.btn_previous);
+        activity2 = (Button)findViewById(R.id.btn_next_activity);
     }
 
     @Override
