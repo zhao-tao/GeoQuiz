@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Bean.Main2Activity">
+        <activity android:name=".Main2Activity">
         </activity>
         
         <receiver android:name=".ActivityReceiver">

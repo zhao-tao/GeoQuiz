@@ -4,11 +4,13 @@ import android.app.Application;
 import android.content.Intent;
 import android.widget.Toast;
 
+import org.litepal.LitePalApplication;
+
 /**
  * Created by 赵涛 on 2016/11/18.
  */
 
-public class TestApplication extends Application {
+public class TestApplication extends LitePalApplication {
 
 	public static TestApplication mInstence = null;
 

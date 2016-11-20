@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import zhao.test.com.mytest.Bean.Main2Activity;
 import zhao.test.com.mytest.Bean.TrueFalse;
 
 public class MainActivity extends AppCompatActivity {
