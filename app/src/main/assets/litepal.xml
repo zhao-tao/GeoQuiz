@@ -2,9 +2,10 @@
 <litepal>
     <dbname value="demo"></dbname>
 
-    <version value="1"></version>
+    <version value="2"></version>
 
     <list>
         <mapping class="zhao.test.com.mytest.Bean.News"></mapping>
+        <storage value="external"></storage>
     </list>
 </litepal>

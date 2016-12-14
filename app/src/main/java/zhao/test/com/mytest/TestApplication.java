@@ -25,8 +25,6 @@ public class TestApplication extends LitePalApplication {
 	public void onCreate() {
 		super.onCreate();
 		mInstence = this;
-		Intent intent = new Intent(this, CountService.class);
-		startService(intent);
 	}
 
 	public void toast(String text) {
